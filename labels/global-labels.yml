@@ -1,0 +1,6 @@
+- name: Engineering department (IdP)
+  description: Hosts whose end user is in the Engineering department in the identity provider. Membership follows the IdP.
+  label_membership_type: host_vitals
+  criteria:
+    vital: end_user_idp_department
+    value: Engineering
