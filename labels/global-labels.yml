@@ -9,3 +9,7 @@
   description: Hosts whose uptime is over 30 days (2,592,000 seconds), meaning they have not rebooted in that time.
   query: SELECT 1 FROM uptime WHERE total_seconds > 2592000;
   label_membership_type: dynamic
+
+- name: macOS 27 beta testers
+  description: Hand-picked hosts testing the macOS 27 beta. Membership is managed manually.
+  label_membership_type: manual
