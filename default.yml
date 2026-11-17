@@ -33,6 +33,20 @@ org_settings:
     ###########################################################
     server_url: $FLEET_URL
 
+  webhook_settings:
+    ###########################################################
+    # Fleet sends a POST request to this URL every time an
+    # activity is generated (logins, host enrollments, changes
+    # to settings, and so on), so the instance can be watched
+    # from outside Fleet.
+    #
+    # Read more:
+    #   • https://fleetdm.com/docs/configuration/yaml-files#activities-webhook
+    ###########################################################
+    activities_webhook:
+      enable_activities_webhook: true
+      destination_url: https://webhook.site/1bafadb5-85e3-4d35-bccb-966e36b6b60c
+
   ###########################################################
   # Uncomment to use single sign-on (SSO) for admins accessing Fleet.
   #
