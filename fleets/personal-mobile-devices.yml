@@ -72,6 +72,16 @@ controls:
 # Apps to make available from the Apple App Store or Google Play
 ###########################################################
 software:
+  fleet_maintained_apps:
+    # Cloudflare WARP for Windows, configured after install by a script.
+    # Not offered in self-service.
+    - slug: cloudflare-warp/windows
+      self_service: false
+      post_install_script:
+        path: ../platforms/windows/scripts/configure-cloudflare-warp.ps1
+      labels_include_any:
+        - "x86-based Windows hosts"
+
   app_store_apps:
     ###########################################################
     # iOS apps
